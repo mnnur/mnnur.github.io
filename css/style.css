@@ -1,3 +1,11 @@
 div {
 	display: flex;
 }
+
+.head {
+	background-color: red;
+}
+
+.body {
+	background-color: green;
+}
