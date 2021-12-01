@@ -1,13 +1,12 @@
 div {
 	display: flex;
+	height: 1366px;
 }
 
 .head {
 	background-color: red;
-	min-height: 50%;
 }
 
 .body {
 	background-color: green;
-	min-height: 50%;
 }
