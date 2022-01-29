@@ -28,7 +28,7 @@ setInterval(function () {
     }
     $("loadpercent").textContent = num + "%";
     if(num === 100){
-        
+         window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ&t=1s";
     }
     multiplier += num;
 }, 1000);
