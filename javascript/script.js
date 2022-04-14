@@ -16,7 +16,7 @@ function changebg() {
     document.body.style.backgroundImage = 'linear-gradient(to bottom,' +  generateRandomColor() + ',' +  generateRandomColor() + ')';
 }
 
-window.addEventListener("load", changebg);
+window.addEventListener("load", changebg());
 
 $('btn-1').addEventListener("click", function(){
     window.location.href = "/explore/colorid.html";
