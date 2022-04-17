@@ -10,23 +10,40 @@
 </head>
 
 <body>
-    <main class="main-content">
-        <h1>Color ID</h1>
-        <div id="view"></div>
-        <div class="parameter">
-            <input type="color" id="colorPicker" name="color" placeholder="Enter a color">
-            <input type="text" id="colorHex" name="hex" placeholder="Enter Hex">
-            <div class="more-parameter">
-                <div class="rgbParameter">
-                    <label for="red">Red</label>
-                    <input type="number" min="0" max="255" id="r" name="red" placeholder="Enter a number">
-                    <label for="green">Green</label>
-                    <input type="number" min="0" max="255" id="g" name="green" placeholder="Enter a number">
-                    <label for="blue">Blue</label>
-                    <input type="number" min="0" max="255" id="b" name="blue" placeholder="Enter a number">
+    <main class="superContainer">
+        <div class="main-content">
+            <h1>Color ID</h1>
+            <div id="view"></div>
+            <div class="parameter">
+                <input type="color" id="colorPicker" name="color" placeholder="Enter a color">
+                <input type="text" id="colorHex" name="hex" placeholder="Enter Hex">
+                <div class="moreParameter">
+                    <div class="rgbParameter">
+                        <label for="red">Red</label>
+                        <input type="number" min="0" max="255" id="r" name="red" placeholder="Enter a number">
+                        <label for="green">Green</label>
+                        <input type="number" min="0" max="255" id="g" name="green" placeholder="Enter a number">
+                        <label for="blue">Blue</label>
+                        <input type="number" min="0" max="255" id="b" name="blue" placeholder="Enter a number">
+                    </div>
+                    <div class="hsbParameter">
+                        <label for="hue">Hue</label>
+                        <input type="number" min="0" max="360" id="h" name="hue" placeholder="Enter a number">
+                        <label for="saturation">Saturation</label>
+                        <input type="number" min="0" max="100" id="s" name="saturation" placeholder="Enter a number">
+                        <label for="brightness">Brightness</label>
+                        <input type="number" min="0" max="100" id="v" name="brightness" placeholder="Enter a number">
+                    </div>
                 </div>
             </div>
+        </div>
+        <div class="image-upload">
+            <h2>Upload Image</h2>
+            <img id="imageDisplay">
+            <input type="file" accept="image/*" id="uploadImage" name="uploadImage">
+        </div>
     </main>
+
     <script src="../javascript/colorid.js"></script>
 </body>
 
