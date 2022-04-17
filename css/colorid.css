@@ -2,13 +2,13 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: cadetblue;
 }
 
 .main-content {
     position: relative;
-    margin: 150px auto;
+    margin: 120px auto;
     width: fit-content;
     height: fit-content;
     min-height: 240px;
@@ -25,4 +25,9 @@ body{
     height: 200px;
     background-color: #ffffff;
     margin: 2px;
+}
+
+.rgbParameter {
+    display: flex;
+    flex-direction: column;
 }

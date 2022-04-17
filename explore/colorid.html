@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +13,19 @@
     <main class="main-content">
         <h1>Color ID</h1>
         <div id="view"></div>
-        <input type="color" id="colorPicker" name="color" placeholder="Enter a color">
+        <div class="parameter">
+            <input type="color" id="colorPicker" name="color" placeholder="Enter a color">
+            <input type="text" id="colorHex" name="hex" placeholder="Enter Hex">
+            <div class="more-parameter">
+                <div class="rgbParameter">
+                    <label for="red">Red</label>
+                    <input type="number" min="0" max="255" id="r" name="red" placeholder="Enter a number">
+                    <label for="green">Green</label>
+                    <input type="number" min="0" max="255" id="g" name="green" placeholder="Enter a number">
+                    <label for="blue">Blue</label>
+                    <input type="number" min="0" max="255" id="b" name="blue" placeholder="Enter a number">
+                </div>
+            </div>
     </main>
     <script src="../javascript/colorid.js"></script>
 </body>
