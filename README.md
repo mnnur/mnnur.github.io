@@ -1,2 +1,2 @@
 # mnnur.github.io
-RICKROLL
+just another website on the internet
