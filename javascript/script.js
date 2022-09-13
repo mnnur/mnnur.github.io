@@ -21,3 +21,7 @@ window.addEventListener("load", changebg());
 $('btn-1').addEventListener("click", function () {
     window.location.href = "/explore/colorid.html";
 });
+
+$('btn-2').addEventListener("click", function () {
+    window.location.href = "https://github.com/mnnur/mnnur-wallpaper-switcher";
+});
