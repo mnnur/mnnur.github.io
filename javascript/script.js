@@ -23,5 +23,5 @@ $('btn-1').addEventListener("click", function () {
 });
 
 $('btn-2').addEventListener("click", function () {
-    window.location.href = "https://github.com/mnnur/mnnur-wallpaper-switcher";
+    location.href = "https://github.com/mnnur/mnnur-wallpaper-switcher";
 });
