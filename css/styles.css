@@ -11044,15 +11044,3 @@ html {
 .copyright {
   background-color: #1a252f;
 }
-
-.side-by-side {
-  display: flex;
-  flex: auto;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-img {
-  max-width: 400px;
-  max-height: 300px;
-}
