@@ -1,0 +1,59 @@
+<script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+<script src="components/random-color.js"></script>
+<script src="components/snap.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aframe-blink-controls/dist/aframe-blink-controls.min.js"></script>
+<script src="components/intersection-spawn.js"></script>
+<script
+    src="https://cdn.jsdelivr.net/gh/c-frame/aframe-physics-system@v4.2.4/dist/aframe-physics-system.min.js"></script>
+<script src="components/creeper.js"></script>
+<script src="components/gun.js"></script>
+<script src="components/magic-shot.js"></script>
+<script src="components/creeper-spawner.js"></script>
+<script src="components/score.js"></script>
+<script src="scripts/restart.js">  </script>
+<script>document.addEventListener('contextmenu', function (e) { e.preventDefault(); });</script>
+
+
+<a-scene physics>
+    <a-assets>
+        <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
+        <img id="skyTexture" src="https://cdn.aframe.io/a-painter/images/sky.jpg">
+        <a-mixin id="voxel" geometry="primitive: box; height: 0.5; width: 0.5; depth: 0.5" material="shader: standard"
+            random-color snap="offset: 0.25 0.25 0.25; snap: 0.5 0.5 0.5" static-body></a-mixin>
+        <a-asset-item id="creeper" src="public/creeper.glb"></a-asset-item>
+        <audio src="https://cdn.aframe.io/basic-guide/audio/backgroundnoise.wav" autoplay preload loop></audio>
+        <audio id="creeperDeath" src="public/creeper_death.ogg" preload></audio>
+        <audio id="gunSound" src="public/gun.wav" preload></audio>
+    </a-assets>
+
+    <a-entity id="player" camera look-controls wasd-controls position="0 1.6 0">
+        <a-entity id="teleHand" hand-controls="hand: left"
+            blink-controls="collisionEntities: [mixin='voxel'], #ground"></a-entity>
+        <a-entity id="blockHand" hand-controls="hand: right" laser-controls raycaster="near: 0.5"
+            intersection-spawn="event: click; mixin: voxel"></a-entity>
+
+        <a-cursor rayOrigin="mouse" intersection-spawn="event: click; mixin: voxel" gun="event: click;"
+            raycaster="objects: *"></a-cursor>
+
+        <a-entity id="uiRoot" position="0 0 0">
+            <a-entity id="gameOverText" position="0 0 -1" text="value: ; align: center; color: red; width: 2"
+                visible="false">
+            </a-entity>
+            <a-text id="scoreUI" position="-0.8 -0.55 -1" width="2" color="yellow" value="Score: 0"></a-text>
+
+            <a-text id="controlText" position="-0.8 -0.7 -1" width="2" color="#0ff"
+                value="WASD to Move | Mouse to Look | Left Click to Shoot | Right Click to Place Block">
+            </a-text>
+        </a-entity>
+
+    </a-entity>
+
+    <a-entity creeper-spawner="interval: 4000; radius: 18"></a-entity>
+
+
+
+    <a-cylinder id="ground" src="#groundTexture" radius="30" height="0.1" static-body></a-cylinder>
+
+    <a-sky id="background" src="#skyTexture" theta-length="90" radius="30"></a-sky>
+
+</a-scene>
